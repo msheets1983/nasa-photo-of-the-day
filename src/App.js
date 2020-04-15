@@ -29,10 +29,11 @@ function App() {
       </p>
       {NASADailyPhoto && <h1 className='title'>{NASADailyPhoto.title}</h1>}
       {NASADailyPhoto && <h3 className='date'> {NASADailyPhoto.date}</h3>}
-      {NASADailyPhoto && <img className='NASAImage' src={NASADailyPhoto.hdurl} />}
+      {NASADailyPhoto && <img className='NASAImage' alt='daily from NASA' src={NASADailyPhoto.hdurl} />}
       {NASADailyPhoto && <p className='descripton'>{NASADailyPhoto.explanation}</p>}
-      {NASADailyPhoto && <h3 className='copyright'>Copyright {NASADailyPhoto.copyright}</h3>}
-      {NASADailyPhoto && <a href='#' className='linkUrl'>{NASADailyPhoto.url}</a>}
+      {NASADailyPhoto && <a href={NASADailyPhoto.url} className='linkUrl'>{NASADailyPhoto.url}</a>}
+      {NASADailyPhoto && <h3 className='copyright'> &copy; 2020 {NASADailyPhoto.copyright}</h3>}
+      
     </div>
   );
 }
