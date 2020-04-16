@@ -1,3 +1,20 @@
+.NASAImage{
+  height: 70vh;
+border-radius: 30px;
+border: white 4px solid
+}
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.descripton{
+  margin: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: justify;
+}
+
 .App {
   text-align: center;
 }
