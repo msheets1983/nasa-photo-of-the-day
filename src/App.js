@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Container from '../src/Container'
 import './App.css';
 
 const url = 'https://api.nasa.gov/planetary/apod'
@@ -27,13 +28,14 @@ function App() {
       <p>
         Welcome to NASA's Daily Photo!
       </p>
-      {NASADailyPhoto && <h1 className='title'>{NASADailyPhoto.title}</h1>}
-      {NASADailyPhoto && <h3 className='date'> {NASADailyPhoto.date}</h3>}
-      {NASADailyPhoto && <img className='NASAImage' alt='daily from NASA' src={NASADailyPhoto.hdurl} />}
-      {NASADailyPhoto && <p className='descripton'>{NASADailyPhoto.explanation}</p>}
-      {NASADailyPhoto && <a href={NASADailyPhoto.url} className='linkUrl'>{NASADailyPhoto.url}</a>}
-      {NASADailyPhoto && <h3 className='copyright'> &copy; 2020 {NASADailyPhoto.copyright}</h3>}
-      
+      <Container>
+      {NASADailyPhoto && <h1>{NASADailyPhoto.title}</h1>}
+      {NASADailyPhoto && <h3> {NASADailyPhoto.date}</h3>}
+      {NASADailyPhoto && <img alt='daily from NASA' src={NASADailyPhoto.hdurl} />}
+      {NASADailyPhoto && <p>{NASADailyPhoto.explanation}</p>}
+      {NASADailyPhoto && <a href={NASADailyPhoto.url}> {NASADailyPhoto.url}</a>}
+      {NASADailyPhoto && <h3> &copy; 2020 {NASADailyPhoto.copyright}</h3>}
+      </Container>
     </div>
   );
 }
